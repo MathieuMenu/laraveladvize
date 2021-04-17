@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edition de l'utilisateur</h2>
+                <h2>Création du compte</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('accounts.index') }}">Retour</a>
@@ -45,8 +45,21 @@
                     <input type="date" name="birth" value="{{ $account->birth }}" class="form-control" placeholder="Date de naissance">
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Login :</strong>
+                    <input type="text" name="login" value="{{ $account->login }}" class="form-control" placeholder="Login">
+                </div>
+            </div>
+            <input type="hidden" name="isuservalid" type="hidden" value=1>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Mot de passe :</strong>
+                    <input type="password" name="password" value="{{ $account->password }}" class="form-control" placeholder="Mot de passe">
+                </div>
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-              <button type="submit" class="btn btn-primary">Envoyer</button>
+              <button type="submit" class="btn btn-primary">Créer</button>
             </div>
         </div>
    

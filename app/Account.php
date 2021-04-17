@@ -9,6 +9,6 @@ class Account extends Model
     //
 
     protected $fillable = [
-        'name', 'surname', 'birth'
+        'name', 'surname', 'birth', 'login', 'password', 'isuservalid'
     ];
 }

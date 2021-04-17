@@ -18,3 +18,8 @@ Route::get('/', function () {
 });
 
 Route::resource('accounts', AccountController::class);
+
+Route::get("/accounts/{account}/register", array(
+    'uses' => 'AccountController@usercreation',
+    'as' => 'accounts.usercreation'
+));

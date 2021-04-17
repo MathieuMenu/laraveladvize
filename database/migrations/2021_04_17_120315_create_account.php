@@ -18,6 +18,9 @@ class CreateAccount extends Migration
             $table->string('name');
             $table->string('surname');
             $table->date('birth');
+            $table->string('login')->nullable();
+            $table->string('password')->nullable();
+            $table->boolean('isuservalid')->default(0);
             $table->timestamps();
         });
     }

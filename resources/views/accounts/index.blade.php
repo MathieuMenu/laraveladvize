@@ -7,7 +7,7 @@
                 <h2>Test Technique !</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('accounts.create') }}">Créer un nouveau compte</a>
+                <a class="btn btn-success" href="{{ route('accounts.create') }}">Créer un nouveau utilisateur</a>
             </div>
         </div>
     </div>
@@ -39,6 +39,9 @@
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <input type="hidden" name="_method" value="delete" />
                     <button type="submit" class="btn btn-danger">Retirer</button>
+                    <?php if($value->isuservalid == 0) : ?>
+                        <a class="btn btn-secondary" href="{{ route('accounts.usercreation' ,$value->id) }}">Créer le compte de connexion</a> 
+                    <?php endif; ?>
                 </form>
             </td>
         </tr>

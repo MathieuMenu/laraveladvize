@@ -75,6 +75,7 @@ class AccountController extends Controller
         return view('accounts.edit',compact('account'));
     }
 
+    
     /**
      * Update the specified resource in storage.
      *
@@ -97,6 +98,18 @@ class AccountController extends Controller
     }
 
     /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Account  $account
+     * @return \Illuminate\Http\Response
+     */
+    public function usercreation(Account $account)
+    {
+        //
+        return view('accounts.usercreation',compact('account'));
+    }
+
+    /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Account  $account
@@ -110,4 +123,5 @@ class AccountController extends Controller
         return redirect()->route('accounts.index')
                         ->with('success','Account deleted successfully');
     }
+    
 }
