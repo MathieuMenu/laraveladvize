@@ -16,19 +16,19 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nom :</strong>
-                {{ $account->name }}
+                {{ $user->name }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Prénom :</strong>
-                {{ $account->firstname }}
+                {{ $user->firstname }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Date de naissance :</strong>
-                {{ $account->birth }}
+                {{ $user->birth }}
             </div>
         </div>
     </div>
