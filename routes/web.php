@@ -23,7 +23,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('users/regigi', array(
+Route::post('users/userregister', array(
     'uses' => 'HomeController@createuserregister',
     'as' => 'users.createregister'
 ));
