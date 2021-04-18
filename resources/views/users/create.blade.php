@@ -4,6 +4,9 @@
 <div class="container">
     <div class="row">
         <div class="panel-body">
+            <div class="pull-right">
+                <a class="btn btn-primary" href="{{ route('users.index') }}">Retour</a>
+            </div>
             <form class="form-horizontal" method="POST" action="{{ route('users.regigi') }}">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input name="_method" type="hidden" value="POST">
