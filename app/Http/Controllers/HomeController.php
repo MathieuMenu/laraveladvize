@@ -39,7 +39,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        return view('users.create');
     }
 
     /**
@@ -128,13 +128,16 @@ class HomeController extends Controller
     public function createregi(Request $request)
     {
         //
-        return User::create([
+        User::create([
             'name' => $request['name'],
             'firstname' => $request['firstname'],
             'birth' => $request['birth'],
             'email' => $request['email'],
             'password' => bcrypt($request['password']),
         ]);
+
+        return redirect()->route('users.index')
+                        ->with('success','users created successfully.');
     }
 
     /**
