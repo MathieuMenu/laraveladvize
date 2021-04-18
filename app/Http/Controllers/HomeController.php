@@ -120,6 +120,24 @@ class HomeController extends Controller
     }
 
     /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\User  $account
+     * @return \Illuminate\Http\Response
+     */
+    public function createregi(Request $request)
+    {
+        //
+        return User::create([
+            'name' => $request['name'],
+            'firstname' => $request['firstname'],
+            'birth' => $request['birth'],
+            'email' => $request['email'],
+            'password' => bcrypt($request['password']),
+        ]);
+    }
+
+    /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Account  $account
