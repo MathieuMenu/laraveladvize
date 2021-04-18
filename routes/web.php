@@ -17,9 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('accounts', AccountController::class);
+Route::resource('users', HomeController::class);
 
-Route::get("/accounts/{account}/register", array(
-    'uses' => 'AccountController@usercreation',
-    'as' => 'accounts.usercreation'
-));
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
