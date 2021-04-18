@@ -125,7 +125,7 @@ class HomeController extends Controller
      * @param  \App\User  $account
      * @return \Illuminate\Http\Response
      */
-    public function createregi(Request $request)
+    public function createuserregister(Request $request)
     {
         //
         User::create([
