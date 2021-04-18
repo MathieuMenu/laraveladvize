@@ -6,6 +6,7 @@ use App\Account;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Hash;
 
 class AccountController extends Controller
 {
@@ -90,6 +91,8 @@ class AccountController extends Controller
             'surname' => 'required',
             'birth' => 'required',
         ]);
+
+        $request['password'] = Hash::make($request['password']);
     
         $account->update($request->all());
     
